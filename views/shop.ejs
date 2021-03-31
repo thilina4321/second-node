@@ -1,0 +1,20 @@
+<%- include('include/head.ejs') %>
+
+<body>
+    <div class="main_nav"></div>
+    <h1> <%= msg %> </h1>
+
+    <% if(prods.length > 0) { %>
+    <div>
+        <% for(let p of prods) { %>
+        <article>
+            <h1> <%= p.title %> </h1>
+            <p>This is the body of the article</p>
+        </article>
+        <% } %>
+    </div>
+    <% } else { %>
+        <h1>NO product yet</h1>
+    <% } %>
+</body>
+</html>
